@@ -9,13 +9,13 @@ const LoginPage = () => {
   const [error, setError] = useState('');
   const { loginUser } = useAuth();
   const navigate = useNavigate();
-  const API = 'https://test-ltw-cuoi-ky-dkmx.vercel.app/landlord/rooms';
+  const API = 'https://test-ltw-cuoiky.onrender.com/api';
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
     try {
-      const res = await axios.post('http://localhost:5000/api/auth/login', { email, password });
+      const res = await axios.post('https://test-ltw-cuoiky.onrender.com/api/auth/login', { email, password });
       loginUser(res.data.user, res.data.token);
       if (res.data.user.role === 'landlord') navigate('/landlord/dashboard');
       else navigate('/tenant/portal');
