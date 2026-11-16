@@ -9,6 +9,7 @@ const LoginPage = () => {
   const [error, setError] = useState('');
   const { loginUser } = useAuth();
   const navigate = useNavigate();
+  const API = 'https://test-ltw-cuoi-ky-dkmx.vercel.app/landlord/rooms';
 
   const handleSubmit = async (e) => {
     e.preventDefault();

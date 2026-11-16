@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useDebounce } from '../hooks/useDebounce';
 
-const API = 'http://localhost:5000/api';
+const API = 'https://test-ltw-cuoi-ky-dkmx.vercel.app/landlord/rooms';
 
 const HomePage = () => {
   const [rooms, setRooms] = useState([]);

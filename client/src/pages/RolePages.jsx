@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { initDraftRows } from '../redux/slices/invoiceSlice';
 import UtilityBulkTable from '../components/invoices/UtilityBulkTable';
 
-const API = 'http://localhost:5000/api';
+const API = 'https://test-ltw-cuoi-ky-dkmx.vercel.app/landlord/rooms';
 const authHeader = () => ({ headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } });
 
 // 1. DASHBOARD CHỦ TRỌ (Hiển thị kết quả Aggregation Pipeline)
