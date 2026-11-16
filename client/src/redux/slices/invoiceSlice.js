@@ -6,7 +6,7 @@ export const submitBulkInvoices = createAsyncThunk(
   async (payload, { rejectWithValue }) => {
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.post('https://test-ltw-cuoiky.onrender.com/api', payload, {
+      const response = await axios.post('[https://test-ltw-cuoiky.onrender.com/api/invoices/bulk](https://test-ltw-cuoiky.onrender.com/api/invoices/bulk)', payload, {
         headers: { Authorization: `Bearer ${token}` }
       });
       return response.data;
